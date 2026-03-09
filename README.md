@@ -1,4 +1,6 @@
-# opal
+# OpalFS
+
+A Gleam wrapper for the web's [OPFS API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system).
 
 [![Package Version](https://img.shields.io/hexpm/v/opal)](https://hex.pm/packages/opal)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/opal/)
