@@ -22,13 +22,17 @@ function getQuota(callback) {
 
 function getOrCreateFile(parent, name, callback) {
   parent.getFileHandle(name, { create: true }).then(fileHandle => {
-    callback(fileHandle);
+    fileHandle.getFile().then(file => {
+      callback(file);
+    });
   });
 }
 
 function getFile(parent, name, callback) {
   parent.getFileHandle(name).then(fileHandle => {
-    callback(fileHandle);
+    fileHandle.getFile().then(file => {
+      callback(file);
+    });
   });
 }
 
@@ -43,4 +47,6 @@ function getDirectory(parent, name, callback) {
     callback(dirHandle);
   });
 }
+
+function listDirectory(dirHandle) {
 
